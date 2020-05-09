@@ -1,0 +1,15 @@
+language: kotlin
+jdk:
+  - openjdk8
+
+env:
+  - TERM=dumb
+
+install:
+  - true
+
+script:
+  - ./mvn -U -B clean install
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

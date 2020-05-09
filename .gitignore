@@ -1,0 +1,16 @@
+*.class
+*.orig
+bin/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+out/
+target/
+.gradle/
+build/
+temp/
+tmp/
+*.log
+classes

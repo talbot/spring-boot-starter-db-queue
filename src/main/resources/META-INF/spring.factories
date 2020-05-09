@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=im.tretyakov.dbqueue.config.DbQueueAutoConfiguration

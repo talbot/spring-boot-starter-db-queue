@@ -1,0 +1,23 @@
+spring.db-queue:
+  enabled: true
+  create-schema: true
+  dialect: POSTGRESQL
+  config.test-queue:
+    location: 'tasks'
+    shards: 'main'
+    thread-count: 1,
+    no-task-timeout: PT5S
+    between-task-timeout: PT1S
+    fatal-crash-timeout: PT60S
+    retry-interval: PT60S
+    retry-type: 'LINEAR_BACKOFF'
+    processing-mode: 'SEPARATE_TRANSACTIONS'
+    retry:
+      type: 'FIXED'
+      initial-delay: PT1S
+      fixed-delay: PT5S
+      arithmetic-step: PT2S
+      geometric-ratio: 2
+      sequential-plan: PT1S,PT2S,PT3S,PT5S,PT8S,PT13S,PT21S,PT34S,PT55S,PT89S
+    additional-settings:
+

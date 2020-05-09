@@ -1,0 +1,39 @@
+{
+  "groups": [
+    {
+      "name": "spring.db-queue",
+      "type": "im.tretyakov.dbqueue.properties.DbQueueProperties",
+      "sourceType": "im.tretyakov.dbqueue.properties.DbQueueProperties",
+      "description": "Yandex.Money DB Queue configuration."
+    },
+    {
+      "name": "spring.db-queue.config",
+      "type": "im.tretyakov.dbqueue.properties.QueueConfigurationProperties",
+      "sourceType": "im.tretyakov.dbqueue.properties.QueueConfigurationProperties",
+      "sourceMethod": "java.util.Map.get()",
+      "description": "Configuration for a specific queue, defined by the queue name."
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.db-queue.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Flag if Yandex.Money DB Queue auto configuration is enabled."
+    },
+    {
+      "name": "spring.db-queue.create-schema",
+      "type": "java.lang.String",
+      "description": "Flag if schema should be created automatically in a database. Database type determined by the database dialect."
+    },
+    {
+      "name": "spring.db-queue.dialect",
+      "type": "ru.yandex.money.common.dbqueue.config.DatabaseDialect",
+      "description": "Database dialect used for the queue."
+    },
+    {
+      "name": "spring.db-queue.config.location",
+      "type": "java.lang.String",
+      "description": "Queue location (name of the table) in the database."
+    }
+  ]
+}
